@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Fetch Api</title>
+</head>
+<body>
+    <h1>It will ping your whatsapp using api bot !!</h1>
+    <p>We are using call me bot to ping your whatsapp. Here if you click on the button given below. The message will go to your added contacts.</p>
+
+    <div class="btn-one" id="btn">
+        <img src="./assest/whatsapp.svg" alt="wa_img">
+    </div>
+
+    <!-- <script >
+        let para = document.querySelector('p')
+        let button = document.querySelector('button')
+
+
+button.addEventListener('click', changeText)
+
+
+function changeText(){
+    console.log("clicked");
+    
+    let success = (position)=>{
+        console.log(position);
+        let latitude = position.coords.latitude
+        let longitude = position.coords.longitude
+
+        let geoApi = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&` +
+        `lon=${longitude}&appid=7a082d64d401039fac18edf10c6a64a1`
+
+        fetch(geoApi)
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+
+            let city = data.name
+
+            para.innerText=city
+        })
+
+        console.log(`${latitude} ${longitude}`);
+    }
+
+    let error = ()=>{
+        console.log('unable to find location');
+    }
+
+    // let loc = navigator.geolocation.getCurrentPosition(success, error)
+    
+}
+
+    </script> -->
+    <script src="./script.js"></script>
+</body>
+</html>
